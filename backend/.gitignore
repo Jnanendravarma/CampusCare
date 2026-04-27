@@ -1,0 +1,17 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Test / dev scripts
+checkDB.js
+setupTestData.js
+testAdminWorkflow.js
+testComplaint.js
+
+# Logs
+*.log
+logs/
