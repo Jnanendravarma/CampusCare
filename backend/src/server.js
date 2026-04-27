@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-import passportConfig from './config/passport.js';
 
 // Import routes
 import authRoutes from './routes/authRoutes.js';
@@ -35,7 +34,6 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(passportConfig.initialize());
 
 // Routes
 app.use('/api/auth', authRoutes);
