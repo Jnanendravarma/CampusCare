@@ -40,6 +40,16 @@ app.use('/api/auth', authRoutes);
 app.use('/api/complaints', complaintRoutes);
 app.use('/api/users', userRoutes);
 
+// Root route (required for Render)
+app.get('/', (req, res) => {
+    res.send('CampusCare Backend Running 🚀');
+});
+
+// API base route
+app.get('/api', (req, res) => {
+    res.json({ message: 'API running' });
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
     res.json({
