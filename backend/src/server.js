@@ -19,7 +19,8 @@ const app = express();
 const allowedOrigins = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    process.env.FRONTEND_URL,
+    'https://campus-care-smoky.vercel.app',  // Production Vercel URL
+    process.env.FRONTEND_URL,                 // Override via env if needed
 ].filter(Boolean);
 
 app.use(cors({
